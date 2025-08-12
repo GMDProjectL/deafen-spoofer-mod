@@ -21,12 +21,6 @@ bool SpooferAPI::init() {
     return true;
 }
 
-void SpooferAPI::kill() {
-    log::info("Killing deafen server...");
-    auto req = web::WebRequest();
-    m_listener.setFilter(req.get(m_baseUrl + "kill"));
-}
-
 void SpooferAPI::toggleDeafen() {
     log::info("Toggling deafen state...");
     auto req = web::WebRequest();

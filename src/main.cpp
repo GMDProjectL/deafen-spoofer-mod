@@ -40,20 +40,7 @@ void hook_keybd_event() {
 }
 
 $execute {
-	std::string path = CCFileUtils::get()->fullPathForFilename("deafenserver.exe"_spr, true);
-	server_handle = _spawnl(_P_NOWAIT, path.c_str(), "deafenserver.exe", nullptr);
-
 	SpooferAPI::get()->init();
 
 	hook_keybd_event();
 }
-
-class $modify(AppDelegate) {
-	void trySaveGame(bool p0) {
-		SpooferAPI::get()->kill();
-		if (server_handle != 0) {
-			TerminateProcess((HANDLE)server_handle, 0);
-		}
-		AppDelegate::trySaveGame(p0);
-	}
-};

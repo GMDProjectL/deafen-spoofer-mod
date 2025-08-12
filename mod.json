@@ -1,5 +1,5 @@
 {
-	"geode": "4.6.3",
+	"geode": "4.7.0",
 	"gd": {
 		"win": "2.2074"
 	},
@@ -7,10 +7,5 @@
 	"name": "deafen-spoofer",
 	"version": "v1.0.0",
 	"developer": "Relative",
-	"description": "Allows you to spoof the auto-deafen keybind on Linux",
-	"resources": {
-		"files": [
-			"resources/deafenserver.exe"
-		]
-	}
+	"description": "Allows you to spoof the auto-deafen keybind on Linux"
 }

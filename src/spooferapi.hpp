@@ -9,6 +9,5 @@ class SpooferAPI : public CCObject {
 public:
     static SpooferAPI* get();
     bool init();
-    void kill();
     void toggleDeafen();
 };
